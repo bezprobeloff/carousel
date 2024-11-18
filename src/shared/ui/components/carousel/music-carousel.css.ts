@@ -4,7 +4,6 @@ import { CarouselSize } from './music-carousel.helpers';
 export const root = style({
   position: 'relative',
   width: '100%',
-  marginBottom: '30px',
   display: 'flex',
   justifyContent: 'center',
 });

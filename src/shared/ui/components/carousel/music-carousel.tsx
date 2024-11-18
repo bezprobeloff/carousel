@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { Carousel, Embla } from '@mantine/carousel';
+import { useMatchMedia } from '~shared/lib/hooks';
 import * as styles from './music-carousel.css.ts';
 import { getRecalcOffset, TABS } from './music-carousel.helpers.tsx';
 import { MusicSlideSize, SlideType } from './slide.helpers.tsx';
@@ -7,6 +8,7 @@ import { Slide } from './slide.tsx';
 import { useSlideOffset } from './use-slide-offset.ts';
 
 export const MusicCarousel: FC = () => {
+  const { isMobile } = useMatchMedia();
   const [slideIndex, setSlideIndex] = useState(0);
   const [embla, setEmbla] = useState<Embla | null>(null);
 
@@ -20,6 +22,7 @@ export const MusicCarousel: FC = () => {
     <Carousel
       loop
       withIndicators
+      withControls={!isMobile}
       height={MusicSlideSize.Default.height}
       slideSize={MusicSlideSize.Default.width}
       slideGap={0}
