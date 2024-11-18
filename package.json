@@ -1,0 +1,62 @@
+{
+  "name": "carousel",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host --open",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ./src",
+    "clean": "rd /s /q dist",
+    "lint-has-warnings": "eslint \"**/*.ts[x]\" --max-warnings=0",
+    "lint-all": "eslint --fix .",
+    "lint-cache": "eslint --cache --fix .",
+    "ts:check": "tsc --skipLibCheck --noEmit",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bezprobeloff/carousel"
+  },
+  "dependencies": {
+    "@mantine/carousel": "^7.12.1",
+    "@mantine/core": "^7.12.1",
+    "@mantine/vanilla-extract": "^7.12.1",
+    "@vanilla-extract/css": "^1.15.5",
+    "embla-carousel-react": "7.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vanilla-extract/vite-plugin": "^4.0.13",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint-has-warnings",
+      "eslint --cache --fix",
+      "prettier -w -u"
+    ]
+  }
+}
