@@ -2,6 +2,7 @@
 
 _Проект демонстрации карусели_
 
+Посмотреть демо - https://carousel-beryl-one.vercel.app/
 
 https://github.com/user-attachments/assets/360f16a7-ff59-4f6a-9e22-35ef929a62f5
 
